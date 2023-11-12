@@ -2,7 +2,7 @@ import React from 'react';
 import style from '../../styles/index.module.scss'
 import { dataIconProfile } from '../../../../assets/data/data';
 import scroll_image from '../../../../../src/assets/images/scrolldown.png';
-
+import Logo_Profile_2 from '../../../../../src/assets/images/Logo_Profile_2.png'
 const Home = () => {
     return (
         <section className={style.section}>
@@ -14,7 +14,8 @@ const Home = () => {
                     </div>
                     <div className={style.circle}>
                         <div className={`${style.layer} ${style.layer_0}`}>
-                            <h1>HN</h1>
+                            <h1><img src={Logo_Profile_2} alt="" /></h1>
+                            
                             <img className={style.animation_0} src={scroll_image} alt="" />
                         </div>
                     </div>

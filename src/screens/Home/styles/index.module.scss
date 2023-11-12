@@ -1,3 +1,5 @@
+@import '../../../assets/sass/abstracts/mixin.scss';
+
 section {
     // height: 100vh;
     display: flex;
@@ -42,8 +44,13 @@ section {
             h1 {
                 font-size: 36px;
                 position: absolute;
-                margin: 0;
+                margin: -45px;
                 padding: 35px;
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
             }
 
         }
@@ -132,21 +139,45 @@ section {
     gap: 50px;
     white-space: nowrap;
     overflow: hidden;
-    // animation: slideText 10s linear infinite;
+    justify-content: center;
+
+    .run {
+        animation: slideTextRightLeft 10s linear infinite;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .run_logo {
+        // animation: slideTextLeftRight 10s linear infinite;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    @keyframes slideTextRightLeft {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    // @keyframes slideTextLeftRight {
+    //     0% {
+    //         transform: translateX(-100%);
+    //     }
+    //     100% {
+    //         transform: translateX(0%);
+    //     }
+    // }
 
     p {
         font-size: 124px;
         font-weight: 700;
         line-height: 140.523%;
         margin: 0;
-    }
-
-    .run {
-        animation: slideText 15s linear infinite;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
+        white-space: nowrap;
     }
 }
 
@@ -155,7 +186,7 @@ section {
     display: grid;
     gap: 20px;
     width: 100%;
-    padding: 0 100px;
+    padding: 50px 100px;
 
     .works_title {
         display: flex;
@@ -168,7 +199,6 @@ section {
 
     .works_content {
         display: grid;
-        justify-content: center;
         align-items: center;
         gap: 20px;
         width: 100%;
@@ -182,7 +212,6 @@ section {
             border: 1px solid #909090;
             border-radius: 16px;
             box-shadow: 3px 4px 9px #F4AAB9;
-            width: 900px;
 
             img {
                 width: 100px;
@@ -276,12 +305,110 @@ section {
     }
 }
 
-@keyframes slideText {
-    0% {
-        transform: translateX(100%);
+// ===== Mobile =====
+
+@media only screen and (max-width: 767.98px) {
+
+    // ===== Home =====
+    .container_home {
+        padding: 100px 20px;
+
+        .container_title {
+
+            .circle {
+
+                h1 {
+                    margin: -10px;
+                    padding: 0px;
+
+                    image {
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+
+            }
+
+            .title_item {
+                .title_welcome {
+                    font-size: 18px;
+                }
+
+                .title {
+                    font-size: 42px;
+                }
+            }
+        }
     }
 
-    100% {
-        transform: translateX(-100%);
+    // ===== INFOMATION =====
+    .container_information {
+        padding: 0 20px;
+        display: grid;
+        gap: 20px;
+
+        .information_title {
+            .title_about {
+                font-size: 18px;
+            }
+
+            .content {
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    // ===== =====
+    .container_featured {
+        gap: 20px;
+        padding: 50px 0;
+        .run_logo {
+
+            gap: 20px;
+            svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    // ===== Works =====
+    .container_works {
+        padding: 20px;
+    }
+}
+
+// ===== tablet =====
+@media only screen and (min-width: 768px) and (max-width: 1180.98px) {
+
+    // ===== Home =====
+    .container_home {
+        padding: 100px 20px;
+    }
+
+    // ===== INFOMATION =====
+    .container_information {
+        padding: 0 20px;
+        display: flex;
+        gap: 20px;
+
+        .information_title {
+            .title_about {
+                font-size: 18px;
+            }
+
+            .content {
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    // ===== Works =====
+    .container_works {
+        padding: 0 20px;
     }
 }

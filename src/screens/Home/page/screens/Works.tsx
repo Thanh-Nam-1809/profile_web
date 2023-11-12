@@ -8,7 +8,6 @@ const Works = () => {
     return (
         <section className={style.section}>
             <div className={style.container_works}>
-                <h1 className={style.works_title}>Works</h1>
                 <div className={style.works_content}>
                     {dataProduct.map((item) => (
                         <div className={style.product_item}>
